@@ -12,5 +12,13 @@ namespace NotificationNamespace
         public string Text { get; set; }
         public DateTime Time { get; set; }
         public string FromUser { get; set; }
+
+        public void ShowNotification()
+        {
+            Console.WriteLine($@"Id : {Id}
+Text : {Text}
+Time : {Time.ToString()}
+User : {FromUser}");
+        }
     }
 }

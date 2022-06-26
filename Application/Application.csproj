@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminNameSpace.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="NotificationNameSpace.cs" />
     <Compile Include="PostNameSpace.cs" />

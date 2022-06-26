@@ -110,7 +110,7 @@ namespace ControllerNamespace
                     Content = content,
                     CreationDateTime = DateTime.Now,
                 };
-                CurrentAdmin.AddPost(p);
+                CurrentAdmin.AddPost(ref p);
             }
             else if (select == 3)
             {

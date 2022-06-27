@@ -10,13 +10,18 @@ namespace AdminNameSpace
     public class Admin
     {
         public int Id { get; set; }
+        public static int ID = 1;
         public string Username { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public Post[] Posts { get; set; }
-        public int PostCount { get; set; } = 0;
+        public int PostCount { get; set; } 
         public Notification[] Notifications { get; set; }
-        public int NotificationCount { get; set; } = 0;
+        public int NotificationCount { get; set; }
+        public Admin()
+        {
+            Id = ID++;
+        }
         public void ShowAllPosts()
         {
             foreach (var post in Posts)
@@ -35,17 +40,17 @@ namespace AdminNameSpace
         }
         public void AddPost(ref Post post)
         {
-            Post[] temp = new Post[PostCount++];
+            Post[] temp = new Post[++PostCount];
             if (Posts != null)
             {
                 Posts.CopyTo(temp, 0);
             }
-            temp[PostCount - 1] = post;
+            temp[temp.Length - 1] = post;
             Posts = temp;
         }
         public void AddNotification(ref Notification notification)
         {
-            Notification[] temp = new Notification[NotificationCount++];
+            Notification[] temp = new Notification[++NotificationCount];
             if (Notifications != null)
             {
                 Notifications.CopyTo(temp, 0);

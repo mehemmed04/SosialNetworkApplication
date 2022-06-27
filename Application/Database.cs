@@ -8,7 +8,7 @@ using UserNamespace;
 
 namespace DatabaseNameSpace
 {
-    class DataBase
+    public  class DataBase
     {
         public User[] Users { get; set; }
         public int UserCount { get; set; }
@@ -30,6 +30,7 @@ namespace DatabaseNameSpace
             }
             return null;
         }
+
 
     }
 }
